@@ -18,6 +18,9 @@ export class UsersService {
     }
 
     async update(users: UpdateUsersDto, id: string) {
+
+        users.updatedAt = new Date();
+
         return this.userModel.findByIdAndUpdate(id, users, {
             new: true
         }).exec();
@@ -29,8 +32,8 @@ export class UsersService {
     }
 
     async findOne(id: string) {
-  
-       return this.userModel.findById(id).exec();
+
+        return this.userModel.findById(id).exec();
     }
 
     async delete(id: string) {

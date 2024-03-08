@@ -18,10 +18,11 @@ export class UsersController {
 
     @Put(":id")
     async update(
+
         @Param("id") id: string,
         @Body(new ValidationPipe()) users: UpdateUsersDto
     ) {
- 
+        
         return this.usersService.update(users, id);
 
     }
