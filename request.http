@@ -1,0 +1,29 @@
+POST http://localhost:3000/users HTTP/1.1
+Content-Type: application/json
+
+{
+
+      "name": "lushito",
+      "email": "correo@example.com"
+    
+}
+
+###
+PUT http://localhost:3000/users/65eadc9922caa145f8a0e01a HTTP/1.1
+Content-Type: application/json
+
+
+{
+      "name": "lushito"
+    
+}
+###
+DELETE http://localhost:3000/users/65eadc9922caa145f8a0e01a HTTP/1.1
+Content-Type: application/json
+###
+
+GET http://localhost:3000/users HTTP/1.1
+Content-Type: application/json
+
+
+###
