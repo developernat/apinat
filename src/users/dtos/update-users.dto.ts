@@ -1,4 +1,4 @@
-import { IsEnum, IsNotEmpty, IsOptional, IsString, isNotEmpty } from "class-validator";
+import { IsEnum, IsNotEmpty, IsOptional, IsString } from "class-validator";
 import { status } from "../schemas/users.schema";
 
 export class UpdateUsersDto {
@@ -17,6 +17,12 @@ export class UpdateUsersDto {
     @IsOptional()
     status: status
 
+    @IsOptional()
+    birthdate: Date;
+
+
     updatedAt: Date;
+    age: number
+
 
 }
