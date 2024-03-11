@@ -109,7 +109,6 @@ export class UsersService {
         search[clave] = find[clave];
       }
     });
-    console.log(search);
     return this.userModel
 
       .find(search)
